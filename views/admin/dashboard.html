@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - SchemeSeeker</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-wrapper { display: flex; min-height: 100vh; }
+    .admin-sidebar {
+      width: 260px;
+      background: white;
+      border-right: 1px solid var(--border);
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+    .admin-main {
+      margin-left: 260px;
+      flex: 1;
+      padding: 2rem;
+      background: var(--body-bg);
+      min-height: 100vh;
+    }
+    .sidebar-brand {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .sidebar-brand h4 { font-weight: 800; color: var(--primary); margin: 0; }
+    .sidebar-nav { list-style: none; padding: 1rem; }
+    .sidebar-nav li { margin-bottom: 0.25rem; }
+    .sidebar-nav a {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .sidebar-nav a:hover, .sidebar-nav a.active {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+    .sidebar-nav a i { font-size: 1.125rem; }
+    .admin-topbar {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media (max-width: 991px) {
+      .admin-sidebar { width: 100%; position: relative; height: auto; }
+      .admin-main { margin-left: 0; }
+      .admin-wrapper { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-wrapper">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <i class="bi bi-shield-lock text-primary" style="font-size: 1.5rem;"></i>
+        <h4>Admin Panel</h4>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="#" class="active" onclick="showDashboard(); return false;"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+        <li><a href="#" onclick="showSchemes(); return false;"><i class="bi bi-grid"></i> All Schemes</a></li>
+        <li><a href="#" onclick="showAddSchemeModal(); return false;"><i class="bi bi-plus-circle"></i> Add Scheme</a></li>
+        <li><a href="#" onclick="showUsers(); return false;"><i class="bi bi-people"></i> Users</a></li>
+        <li><hr style="margin: 1rem 0;"></li>
+        <li><a href="/" target="_blank"><i class="bi bi-box-arrow-up-right"></i> View Site</a></li>
+        <li><a href="#" onclick="adminLogout(); return false;" class="text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <h5 class="mb-0">Dashboard Overview</h5>
+        <div class="d-flex align-items-center gap-3">
+          <span class="text-secondary"><i class="bi bi-calendar"></i> <span id="currentDate"></span></span>
+          <a href="/" class="btn btn-sm btn-outline-primary" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Visit Site</a>
+        </div>
+      </div>
+
+      <div id="adminDashboard">
+        <!-- Dashboard content loaded by JS -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Add Scheme Modal -->
+  <div class="modal fade" id="addSchemeModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="bi bi-plus-circle"></i> Add New Scheme</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addSchemeForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Scheme Name</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Category</label>
+                <select class="form-select" name="category_id" required>
+                  <option value="1">Farmers</option>
+                  <option value="2">Women</option>
+                  <option value="3">Students</option>
+                  <option value="4">Health</option>
+                  <option value="5">Senior Citizens</option>
+                  <option value="6">Employment</option>
+                  <option value="7">Housing</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Scope</label>
+                <select class="form-select" name="scope" required>
+                  <option value="central">Central</option>
+                  <option value="state">State</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Application URL</label>
+                <input type="url" class="form-control" name="application_url" placeholder="https://">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" name="description" rows="3" required></textarea>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Min Age</label>
+                <input type="number" class="form-control" name="min_age" value="0" min="0">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Max Age</label>
+                <input type="number" class="form-control" name="max_age" value="120" min="0">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Gender</label>
+                <select class="form-select" name="gender">
+                  <option value="all">All</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Max Income (Rs.)</label>
+                <input type="number" class="form-control" name="max_income" placeholder="Optional">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Occupation</label>
+                <select class="form-select" name="occupation">
+                  <option value="all">All</option>
+                  <option value="farmer">Farmer</option>
+                  <option value="student">Student</option>
+                  <option value="unemployed">Unemployed</option>
+                  <option value="self_employed">Self Employed</option>
+                  <option value="street_vendor">Street Vendor</option>
+                  <option value="artisan">Artisan</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Education</label>
+                <select class="form-select" name="education_level">
+                  <option value="all">All</option>
+                  <option value="none">None</option>
+                  <option value="5th">Class 5</option>
+                  <option value="8th">Class 8</option>
+                  <option value="10th">Class 10</option>
+                  <option value="12th">Class 12</option>
+                  <option value="graduate">Graduate</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Caste</label>
+                <select class="form-select" name="caste_category">
+                  <option value="all">All</option>
+                  <option value="sc">SC</option>
+                  <option value="st">ST</option>
+                  <option value="obc">OBC</option>
+                  <option value="minority">Minority</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Benefits</label>
+                <textarea class="form-control" name="benefit_details" rows="3" required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Documents Required</label>
+                <textarea class="form-control" name="documents_required" rows="2" required></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" onclick="submitAddScheme()"><i class="bi bi-plus-circle"></i> Add Scheme</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // Set current date
+    document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-IN', { 
+      year: 'numeric', month: 'long', day: 'numeric' 
+    });
+
+    function showDashboard() {
+      document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+      document.querySelector('.sidebar-nav a:first-child').classList.add('active');
+      loadAdminDashboard();
+    }
+
+    async function showSchemes() {
+      document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      const container = document.getElementById('adminDashboard');
+      showLoading(container, 'Loading schemes...');
+
+      try {
+        const response = await fetch('/api/admin/schemes');
+        const data = await response.json();
+
+        if (data.success) {
+          container.innerHTML = `
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">All Schemes (${data.pagination.total})</h5>
+                <button class="btn btn-sm btn-primary" onclick="showAddSchemeModal()">
+                  <i class="bi bi-plus-circle"></i> Add Scheme
+                </button>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Scope</th>
+                        <th>Category</th>
+                        <th>Age</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${data.schemes.map(s => `
+                        <tr>
+                          <td>${s.id}</td>
+                          <td><strong>${s.name}</strong></td>
+                          <td><span class="badge ${s.scope === 'central' ? 'bg-danger' : 'bg-success'}">${s.scope}</span></td>
+                          <td>${s.category_name}</td>
+                          <td>${s.min_age}-${s.max_age}</td>
+                          <td><span class="badge ${s.is_active ? 'bg-success' : 'bg-secondary'}">${s.is_active ? 'Active' : 'Inactive'}</span></td>
+                          <td>
+                            <button class="btn btn-sm btn-outline-primary me-1" onclick="editScheme(${s.id})"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deactivateScheme(${s.id})"><i class="bi bi-trash"></i></button>
+                          </td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      } catch (error) {
+        container.innerHTML = '<div class="alert alert-danger">Failed to load schemes</div>';
+      }
+    }
+
+    async function showUsers() {
+      document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      const container = document.getElementById('adminDashboard');
+      showLoading(container, 'Loading users...');
+
+      try {
+        const response = await fetch('/api/admin/users');
+        const data = await response.json();
+
+        if (data.success) {
+          container.innerHTML = `
+            <div class="card">
+              <div class="card-header"><h5 class="mb-0">Registered Users (${data.users.length})</h5></div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr><th>ID</th><th>Name</th><th>Email</th><th>Age</th><th>Occupation</th><th>District</th><th>Joined</th></tr>
+                    </thead>
+                    <tbody>
+                      ${data.users.map(u => `
+                        <tr>
+                          <td>${u.id}</td>
+                          <td>${u.name}</td>
+                          <td>${u.email}</td>
+                          <td>${u.age || '-'}</td>
+                          <td>${u.occupation || '-'}</td>
+                          <td>${u.district || '-'}</td>
+                          <td>${new Date(u.created_at).toLocaleDateString()}</td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      } catch (error) {
+        container.innerHTML = '<div class="alert alert-danger">Failed to load users</div>';
+      }
+    }
+
+    function showAddSchemeModal() {
+      new bootstrap.Modal(document.getElementById('addSchemeModal')).show();
+    }
+
+    async function submitAddScheme() {
+      const form = document.getElementById('addSchemeForm');
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Convert numeric fields
+      data.min_age = parseInt(data.min_age) || 0;
+      data.max_age = parseInt(data.max_age) || 120;
+      data.max_income = data.max_income ? parseFloat(data.max_income) : null;
+
+      try {
+        const response = await fetch('/api/admin/schemes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          showToast('Scheme added successfully!');
+          bootstrap.Modal.getInstance(document.getElementById('addSchemeModal')).hide();
+          form.reset();
+          showDashboard();
+        } else {
+          showToast(result.message, 'error');
+        }
+      } catch (error) {
+        showToast('Failed to add scheme', 'error');
+      }
+    }
+
+    async function deactivateScheme(id) {
+      if (!confirm('Are you sure you want to deactivate this scheme?')) return;
+
+      try {
+        const response = await fetch(`/api/admin/schemes/${id}`, { method: 'DELETE' });
+        const result = await response.json();
+
+        if (result.success) {
+          showToast('Scheme deactivated');
+          showSchemes();
+        } else {
+          showToast(result.message, 'error');
+        }
+      } catch (error) {
+        showToast('Failed to deactivate scheme', 'error');
+      }
+    }
+
+    function editScheme(id) {
+      showToast('Edit feature - implement as needed', 'warning');
+    }
+
+    async function adminLogout() {
+      try {
+        await fetch('/api/admin/logout', { method: 'POST' });
+        window.location.href = '/admin';
+      } catch (error) {
+        showToast('Logout failed', 'error');
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      checkSession();
+      showDashboard();
+    });
+  </script>
+</body>
+</html>

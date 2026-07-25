@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility Form - SchemeSeeker</title>
+  <meta name="description" content="Fill in your details to find government schemes you are eligible for.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <i class="bi bi-search-heart"></i> SchemeSeeker
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="/"><i class="bi bi-house-door"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/form"><i class="bi bi-search"></i> Find Schemes</a></li>
+          <li class="nav-item"><a class="nav-link" href="/results?browse=all"><i class="bi bi-grid"></i> All Schemes</a></li>
+          <li class="nav-item ms-lg-2">
+            <div class="lang-switcher">
+              <button class="lang-btn active" data-lang="en">EN</button>
+              <button class="lang-btn" data-lang="bn">BN</button>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-lg-3" id="authNav"></ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form Header -->
+  <section class="results-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="text-white mb-2"><i class="bi bi-clipboard-check"></i> Eligibility Checker</h1>
+          <p class="text-white-50 mb-0">Fill in your details to find schemes you are eligible for</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <a href="/results?browse=all" class="btn btn-outline-light">
+            <i class="bi bi-grid"></i> Browse All Schemes
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section py-5">
+    <div class="container">
+      <div class="card form-card shadow-lg">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0"><i class="bi bi-person-lines-fill"></i> Personal Information</h4>
+        </div>
+        <div class="card-body p-4 p-md-5">
+          <form id="eligibilityForm">
+            <div class="row g-4">
+              <!-- Age -->
+              <div class="col-md-6">
+                <label for="age" class="form-label">
+                  <i class="bi bi-calendar text-primary"></i> Age <span class="text-danger">*</span>
+                </label>
+                <input type="number" class="form-control" id="age" name="age" min="0" max="120" required placeholder="Enter your age in years">
+                <div class="form-text">Your current age in years</div>
+              </div>
+
+              <!-- Gender -->
+              <div class="col-md-6">
+                <label for="gender" class="form-label">
+                  <i class="bi bi-gender-ambiguous text-primary"></i> Gender <span class="text-danger">*</span>
+                </label>
+                <select class="form-select" id="gender" name="gender" required>
+                  <option value="" selected disabled>Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Annual Income -->
+              <div class="col-md-6">
+                <label for="income" class="form-label">
+                  <i class="bi bi-currency-rupee text-primary"></i> Annual Family Income (Rs.)
+                </label>
+                <div class="input-group">
+                  <span class="input-group-text">Rs.</span>
+                  <input type="number" class="form-control" id="income" name="income" min="0" placeholder="e.g. 120000">
+                </div>
+                <div class="form-text">Total annual family income from all sources</div>
+              </div>
+
+              <!-- Occupation -->
+              <div class="col-md-6">
+                <label for="occupation" class="form-label">
+                  <i class="bi bi-briefcase text-primary"></i> Occupation
+                </label>
+                <select class="form-select" id="occupation" name="occupation">
+                  <option value="all" selected>Any / Not Applicable</option>
+                  <option value="farmer">Farmer / Agriculture</option>
+                  <option value="student">Student</option>
+                  <option value="unemployed">Unemployed</option>
+                  <option value="self_employed">Self Employed / Business</option>
+                  <option value="street_vendor">Street Vendor / Hawker</option>
+                  <option value="artisan">Artisan / Craftsman</option>
+                  <option value="private_sector">Private Sector Employee</option>
+                  <option value="government">Government Employee</option>
+                  <option value="homemaker">Homemaker</option>
+                  <option value="retired">Retired / Pensioner</option>
+                  <option value="labourer">Daily Wage Labourer</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Education Level -->
+              <div class="col-md-6">
+                <label for="education" class="form-label">
+                  <i class="bi bi-book text-primary"></i> Education Level
+                </label>
+                <select class="form-select" id="education" name="education">
+                  <option value="all" selected>Any</option>
+                  <option value="none">No Formal Education</option>
+                  <option value="primary">Primary (Class 1-5)</option>
+                  <option value="5th">Class 5 Pass</option>
+                  <option value="8th">Class 8 Pass</option>
+                  <option value="10th">Class 10 / Matriculation</option>
+                  <option value="11th">Class 11 / Higher Secondary</option>
+                  <option value="12th">Class 12 / Higher Secondary</option>
+                  <option value="graduate">Graduate / Bachelor's Degree</option>
+                  <option value="postgraduate">Postgraduate / Master's Degree</option>
+                  <option value="phd">PhD / Doctoral</option>
+                </select>
+              </div>
+
+              <!-- Caste Category -->
+              <div class="col-md-6">
+                <label for="caste" class="form-label">
+                  <i class="bi bi-people text-primary"></i> Caste Category
+                </label>
+                <select class="form-select" id="caste" name="caste">
+                  <option value="all" selected>General / All Categories</option>
+                  <option value="sc">Scheduled Caste (SC)</option>
+                  <option value="st">Scheduled Tribe (ST)</option>
+                  <option value="obc">Other Backward Classes (OBC)</option>
+                  <option value="minority">Minority Community</option>
+                </select>
+              </div>
+
+              <!-- State -->
+              <div class="col-12">
+                <label for="state" class="form-label">
+                  <i class="bi bi-geo-alt text-primary"></i> State
+                </label>
+                <select class="form-select" id="state" name="state">
+                  <option value="west bengal" selected>West Bengal</option>
+                  <option value="all">All India (Central Schemes Only)</option>
+                </select>
+                <div class="form-text">Currently focused on West Bengal. Select "All India" for Central Government schemes only.</div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-3 d-md-flex justify-content-md-center mt-5">
+              <button type="submit" class="btn btn-success btn-lg px-5">
+                <i class="bi bi-search"></i> Find Eligible Schemes
+              </button>
+              <button type="reset" class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-arrow-counterclockwise"></i> Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Quick Tips -->
+      <div class="card mt-4 border-info border-2">
+        <div class="card-body">
+          <h5 class="text-info mb-3"><i class="bi bi-lightbulb"></i> Tips for Best Results</h5>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Enter accurate income details for correct eligibility matching</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Select your correct caste category for reservation-based schemes</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Students should select "Student" as occupation</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Leave income blank if not sure - we'll show all income-based schemes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 SchemeSeeker. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

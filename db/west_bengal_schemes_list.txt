@@ -1,0 +1,428 @@
+1. Kanyashree Prakalpa (WBKANYASHREE)
+   Category: Social welfare & Empowerment, Education & Learning, Women and Child
+   Tags: Girl, Education, Scholarship, Child Marriage Prevention, Vocational Training, Grants For Higher Education
+
+2. Pratyasha Scheme- West Bengal (PS-WEST BENGAL)
+   Category: Housing & Shelter
+   Tags: Police, House, Flats, Financial Assistance, Housing Assistance
+
+3. Gatidhara Scheme (GS-WEST BENGAL)
+   Category: Business & Entrepreneurship
+   Tags: Unemployed, Youth, Subsidy, Commercial Vehicle, Transport Service
+
+4. Bina Mulya Samajik Suraksha Yojana (BMSSY)
+   Category: Social welfare & Empowerment
+   Tags: Maternity Benefits, Pension, Death Benefits, Medical Benefits
+
+5. Widow Pension-West Bengal (WPWB)
+   Category: Social welfare & Empowerment, Women and Child
+   Tags: Financial Assistance, Social Welfare, Pension
+
+6. Medical Expenses-Treatment for Major Ailments Including Surgery (METFMAISWB)
+   Category: Health & Wellness, Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Treatment, Ailments, Surgery, Medical Expenses
+
+7. West Bengal Transport Workers’ Social Security Scheme: Assistance on Death and Permanent Disablement (WBTWSSADPD)
+   Category: Health & Wellness
+   Tags: Social Empowerment, Transport Worker, Monthly Assistance, Death Assistance, Permanent Disablement
+
+8. Banglar Awaas Yojana (BAY) (BAY)
+   Category: Housing & Shelter
+   Tags: Housing, Citizen Empowerment
+
+9. Banglar Yuba Sathi (BYSWB)
+   Category: Social welfare & Empowerment
+   Tags: Unemployed Youth Allowance, Youth Welfare, Monthly Allowance, Banglar Yuba Sathi
+
+10. Old Age Pension To Handloom Weavers Under Coop. Fold (OLAHWUCF)
+   Category: Social welfare & Empowerment
+   Tags: Pension, Handloom Weavers, Old Age
+
+11. Annapurna Yojana (AYWB)
+   Category: Social welfare & Empowerment
+   Tags: Women Empowerment, Financial Assistance, Women Welfare, DBT
+
+12. Lakshmir Bhandar Scheme (LBS-WB)
+   Category: Social welfare & Empowerment, Women and Child
+   Tags: Financial Asisstance, Social Welfare, Women, Lakshmir Bhandar
+
+13. West Bengal Student Credit Card Scheme (WBSCCS)
+   Category: Education & Learning
+   Tags: Financial Assistance, Education Loan, Higher Study
+
+14. Disability Pension - West Bengal (DPWB)
+   Category: Social welfare & Empowerment
+   Tags: Financial Assistance, Social Welfare, Pension
+
+15. Manabik Scheme (MS)
+   Category: Social welfare & Empowerment
+   Tags: Financial Assistance, Differently Abled, Pension, Social Welfare
+
+16. Old Age Pension (OAPWB)
+   Category: Social welfare & Empowerment
+   Tags: Financial Assistance, Social Welfare, Pension, Old Age, Senior Citizens
+
+17. West Bengal Migrant Workers’ Welfare Scheme: Death Assistance (WBMWWSDA)
+   Category: Social welfare & Empowerment
+   Tags: Migrant, Social Welfare, Financial Assistance, Labour, Death, Accident, Worker
+
+18. West Bengal Migrant Workers’ Welfare Scheme: Repatriation of Dead Body (WBMWWSC)
+   Category: Social welfare & Empowerment
+   Tags: Cremation, Migrant, Social Welfare, Financial Assistance, Labour, Worker, Repatriation
+
+19. West Bengal Migrant Workers’ Welfare Scheme: Cremation (WBMWWSCA)
+   Category: Social welfare & Empowerment
+   Tags: Social Welfare, Migrant, Financial Assistance, Labour, Cremation, Death, Worker
+
+20. West Bengal Artisans Financial Benefit Scheme 2024: Grant to Industrial Cooperative Society (WBAFBSGICS)
+   Category: Business & Entrepreneurship
+   Tags: Artisans, Financial Benefit, Purchase, Repair, Equipment, Tool Kits
+
+21. West Bengal Artisans Financial Benefit Scheme: Facilitation Supports (WBAFBSFS)
+   Category: Business & Entrepreneurship
+   Tags: Artisans, Facilitation Support
+
+22. Accidental Benefit  (ADWB)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Accidental Benefit, Hospitalization, Disability
+
+23. Maternity Benefit (MBWB)
+   Category: Social welfare & Empowerment, Health & Wellness, Women and Child
+   Tags: Labour, Building Worker, Construction Worker, Maternity, Pregnancy Care, Women
+
+24. Pension Benefit (PBWB)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Pension, Nominee
+
+25. Tool Purchase Grant for the Construction Workers (TPGFTCW)
+   Category: Business & Entrepreneurship
+   Tags: Labour, Building Worker, Construction Worker, Tool Purchase
+
+26. Miscarriage Benefit  (MBBWWB)
+   Category: Social welfare & Empowerment, Women and Child, Health & Wellness
+   Tags: Labour, Building Worker, Construction Worker, Miscarriage, Women
+
+27. Financial Assistance for Education of Self/ Children of Beneficiaries  (FAFEOSCOB)
+   Category: Education & Learning, Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Education, Study, Scholarships
+
+28. Cost of Spectacle for the Construction Workers   (COSFTCW)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Spectacle Purchase
+
+29. Cost of Hearing Aid for the Construction Workers (COHAFTCW)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Hearing Aid
+
+30. West Bengal Transport Workers’ Social Security Scheme: Assistance for Purchase of Spectacles (WBTWSAPS)
+   Category: Social welfare & Empowerment, Health & Wellness
+   Tags: Social Security, Transport Worker, Health & Wellness, Medical Appliance
+
+31. West Bengal Transport Workers’ Social Security Scheme: Pension (WBTWSSP)
+   Category: Social welfare & Empowerment
+   Tags: Social Security, Transport Worker, Monthly Assistance, Pension
+
+32. Shikshashree Scheme (SS-WEST BENGAL)
+   Category: Education & Learning
+   Tags: Scheduled Caste, Student, Scholarship, Financial Assistance, Class V-VIII
+
+33. Swami Vivekananda Merit-cum-Means Scholarship (SVMCMS)
+   Category: Education & Learning
+   Tags: Student, Financial Assistance, Education
+
+34. Akanksha Housing Scheme (Ahs)
+   Category: Housing & Shelter
+   Tags: Housing, West Bengal, State Government Employees
+
+35. Rupashree Prakalpa (RPWB)
+   Category: Social welfare & Empowerment, Women and Child
+   Tags: Poor Families, Daughter, Marriage Assistance
+
+36. Jai Johar (Old Age Pension) Scheme (JJOAPS)
+   Category: Banking,Financial Services and Insurance, Social welfare & Empowerment
+   Tags: Pension, Senior Citizen, Social Welfare, Financial Assistance, Scheduled Tribe
+
+37. Toposili Bandhu (Old Age Pension) Scheme (OBS)
+   Category: Social welfare & Empowerment
+   Tags: Pension, Financial Assistance, Social Welfare
+
+38. Yuvasree Prakalpa (YUVASREE )
+   Category: Skills & Employment
+   Tags: Employment, Job Seeker, Financial Assistance, Placement
+
+39. Death Benefit (DBFTCWWB)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Death Benefit, Accidental Death, Normal Death
+
+40. Funeral Expenses for the Construction Workers (FEFTCWWB)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Building Worker, Construction Worker, Funeral Expenses, Death
+
+41. West Bengal Transport Workers’ Social Security Scheme: Family Pension (WBTWSSFP)
+   Category: Social welfare & Empowerment
+   Tags: Social Security, Transport Worker, Monthly Assistance, Family Pension
+
+42. West Bengal Freeship Scheme (WBFS)
+   Category: Education & Learning
+   Tags: Tuition Fee Waiver, Freeship, Financial Support, Engineering & Technology, Pharmacy, Architecture
+
+43. Lokprasar Prakalpo Scheme (LPS)
+   Category: Sports & Culture
+   Tags: Folk, Artists, Tribal Culture, Pension, Financial Assistance, Performance Fee
+
+44. West Bengal Migrant Workers’ Welfare Scheme: Accidental Disability (WBMWWSAD)
+   Category: Social welfare & Empowerment
+   Tags: Migrant, Social Welfare, Financial Assistance, Labour, Accident, Disability, Worker
+
+45. West Bengal Artisans Financial Benefit Scheme 2024: Grant to Individual Artisans (WBAFBGIA)
+   Category: Social welfare & Empowerment
+   Tags: Artisans, Financial Benefit, Purchase, Repair, Equipment, Tool Kits
+
+46. West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Assistance to Individual Handloom Weaver (AIHW)
+   Category: Business & Entrepreneurship
+   Tags: Handloom, Handloom Weaver, Financial Benefit
+
+47. Refund of Subscriptions for the Construction Workers (ROSFTCW)
+   Category: Social welfare & Empowerment
+   Tags: Labour, Construction Worker, Subscriptions Refund
+
+48. West Bengal Transport Workers’ Social Security Scheme: Assistance on Hospitalization (WBTWSSAH)
+   Category: Health & Wellness
+   Tags: Social Security, Transport Worker, Hospitalization, Medical Assistance
+
+49. State Welfare Scheme For Purohits (SWSP)
+   Category: Social welfare & Empowerment, Housing & Shelter
+   Tags: Economically Backward, Purohit, Priests, Financial Assistance, House
+
+50. West Bengal Transport Workers’ Social Security Scheme: Assistance for Education of Children (WBTWSAE)
+   Category: Education & Learning
+   Tags: Social Security, Transport Worker, Engineering And Medical, Education, Scholarship, Higher Secondary, Graduation, Post-Graduation
+
+51. NIJASHAREE HOUSING SCHEME (NHS- WEST BENGAL)
+   Category: Housing & Shelter, Social welfare & Empowerment
+   Tags: House, Flats, Lower Income Group, Middle Income Group
+
+52. Scheme of Death Benefit for Weavers & Artisans of West Bengal (SDBWAW)
+   Category: Social welfare & Empowerment
+   Tags: Weavers, Social Welfare, Artisans, Death
+
+53. Karma Sathi Prakalpa (KSP)
+   Category: Skills & Employment
+   Tags: Employment, Entrepreneur, West Bengal, Loan, Subsidy
+
+54. West Bengal Transport Workers’ Social Security Scheme: Medical Benefit for Major Ailments (WBTWSMBMA)
+   Category: Health & Wellness
+   Tags: Social Security, Transport Worker, Health & Wellness, Major Ailments, Medical Benefit
+
+55. West Bengal Transport Workers’ Social Security Scheme: Funeral Expenses (WBTWSFE)
+   Category: Social welfare & Empowerment
+   Tags: Social Security, Transport Worker, Social Empowerment, Funeral Expenses
+
+56. Sishu Saathi (WBSISHUSATHI)
+   Category: Health & Wellness, Social welfare & Empowerment
+   Tags: Sishu Saathi, Social Welfare, Financial Assistance, Child Health
+
+57. Krishak Bandhu Scheme (KBS)
+   Category: Agriculture,Rural & Environment, Social welfare & Empowerment
+   Tags: Farmer, Financial Assistance, Agriculture, Income, Death, Disability
+
+58. West Bengal Transport Workers’ Social Security Scheme: Assistance for Marriage (WBTWSAM)
+   Category: Social welfare & Empowerment
+   Tags: Social Security, Transport Worker, Marriage Assistance, Women
+
+59. West Bengal Transport Workers’ Social Security Scheme: Maternity Benefit (WBTWSMB)
+   Category: Women and Child, Health & Wellness
+   Tags: Social Security, Transport Worker, Health & Wellness, Maternity Benefit, Medical Benefit, Pregnant Women
+
+60. Samajik Mukti (SM)
+   Category: Social welfare & Empowerment, Banking,Financial Services and Insurance
+   Tags: Labour, Provident Fund, Unorganised Sector, Social, Financial
+
+61. Banglashree for Micro, Small and Medium Enterprises: Interest Subsidy on Term Loan (IS) (BMSMECIS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Interest Subsidy, Financial Assistance, Term Loan, Entrepreneurship
+
+62. Banglashree for Micro, Small and Medium Enterprises: Subsidy for Work Force Welfare Assistance (WWAS) (BMSMEWWAS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Work Force Welfare, Financial Assistance, Entrepreneurship, Subsidy, Reimbursement, WWAS
+
+63.  The West Bengal Incentive Scheme: Additional Incentive on Generation of Employment (WBISAIGE)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, Waiver, Tourism Units, Entrepreneurship, Subsidy, Reimbursement, Employment Generation
+
+64.  The West Bengal Incentive Scheme: Interest Subsidy on Term Loan (WBISISTL)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, Interest Subsidy, Tourism Units, Entrepreneurship, Subsidy, Reimbursement, Term Loan, MSME
+
+65.  West Bengal Textile Incentive Scheme: Incentive for Energy Efficiency (WBTISIEE)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, Waiver, Entrepreneurship, Subsidy, Reimbursement, Electricity Duty
+
+66. Incentive Scheme for MSMEs in Powerloom Sector: Subsidy on Stamp Duty and Registration Fees (ISMPSSSD)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, Stamp Duty, Entrepreneurship, Subsidy, Reimbursement, Registration Fees
+
+67. Credit Linked Subsidy Scheme for Rural Entrepreneurs to set up Custom Hiring Centres (CHC) of Farm Machinery (CHC)
+   Category: Agriculture,Rural & Environment
+   Tags: Agriculture, Farmers, Credit Linked Subsidy, Financial Assistance, Entrepreneurs, Custom Hiring Centres, Farm Machinery, Subsidy
+
+68. Farm Machinery Bank (FMB)/Farm Machinery Hub (FMH) (FMH)
+   Category: Agriculture,Rural & Environment
+   Tags: Agriculture, Farmers, Employment, Subsidy, Rural, Youth, Farm Machinery, Entrepreneurs, Machinery Bank, Machinery Hub
+
+69.  West Bengal Textile Incentive Scheme: Subsidy for Water conservation/ Environment Compliance (WBTISSWCEC)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, Waiver, Entrepreneurship, Subsidy, Reimbursement, Water Conservation, Environment Compliance
+
+70.  West Bengal Textile Incentive Scheme: Waiver of Fees for Land Conversion and Mutation (WBTISWFFLCM)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, Waiver, Entrepreneurship, Subsidy, Reimbursement, Land Conversion, Mutation
+
+71.  The West Bengal Incentive Scheme: Reimbursement of Stamp Duty and Registration Fee (WBISRSDRF)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, Stamp Duty, Tourism Units, Entrepreneurship, Subsidy, Reimbursement, Adventure, Registration Fee
+
+72. West Bengal Artisans Financial Benefit Scheme: Support for Digital Marketing (WBAFBSSDM)
+   Category: Business & Entrepreneurship
+   Tags: Artisans, Digital Marketing, E-commerce
+
+73.  West Bengal Textile Incentive Scheme: Waiver of Electricity Duty (WBTISWED)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, Waiver, Entrepreneurship, Subsidy, Reimbursement, Electricity Duty
+
+74.  West Bengal Textile Incentive Scheme: State Capital Investment Subsidy (WBTISSCIS)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, State Capital Investment Subsidy, Entrepreneurship, Subsidy, Reimbursement
+
+75. Incentive Scheme for MSMEs in Powerloom Sector: Work Force Welfare Assistance (ISMPSWFWA)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, Work Force Welfare, Entrepreneurship, Subsidy, Reimbursement, ESI, EPF
+
+76.  Incentive Scheme for MSMEs in Powerloom Sector: State Capital Investment Subsidy (ISMPSSCIS)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Incentives, State Capital Investment Subsidy, Entrepreneurship, Subsidy, Reimbursement
+
+77. West Bengal Incentive Scheme for Approved Industrial Park (SAIP) for MSMEs: Reimbursement of Stamp Duty (SAIPRSD)
+   Category: Business & Entrepreneurship
+   Tags: Entrepreneurship, MSMEs, Stamp Duty, Industrial Park, Fiscal Incentives
+
+78. West Bengal Incentive Scheme for Approved Industrial Park (SAIP) for MSMEs: Incentive for Basic and Essential Common Infrastructure Facilities (SAIPIBECI)
+   Category: Business & Entrepreneurship
+   Tags: Entrepreneurship, Industrial Park, Fiscal Incentives, Infrastructure Facilities
+
+79. One Time Assistance to Small and Marginal Farmers for Purchase of Small Farm Implements (OTA-SFI) (OTA-SFI)
+   Category: Agriculture,Rural & Environment
+   Tags: Agriculture, Farmers, Small Farm Implements, Financial Assistance
+
+80. Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES) (BMSMEEES)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Energy Efficiency, Entrepreneurship, Subsidy
+
+81.  The West Bengal Incentive Scheme: Waiver of Electricity Duty (WBISWED)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, Waiver, Tourism Units, Entrepreneurship, Subsidy, Reimbursement, Electricity Duty, MSME
+
+82.  The West Bengal Incentive Scheme: State Capital Investment Subsidy (WBISSCIS)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, State Capital Investment Subsidy, Tourism Units, Entrepreneurship, Subsidy, Reimbursement, MsmeS
+
+83. Banglashree for Micro, Small and Medium Enterprises: Subsidy on Stamp Duty and Registration Fee (SDRFS) (BMSMESDRFS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Stamp Duty, Financial Assistance, Entrepreneurship, Subsidy, Registration Fee, Reimbursement
+
+84. Incentive Scheme for MSMEs in Powerloom Sector: Interest Subsidy on Term Loan (ISMPSISTL)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Incentives, Interest Subsidy, Entrepreneurship, Subsidy, Reimbursement, Term Loan
+
+85. Incentive Scheme for MSMEs in Powerloom Sector: Waiver of Electricity Duty (ISMPSWED)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, Electricity Duty, Entrepreneurship, Subsidy, Reimbursement
+
+86. Incentive Scheme for MSMEs in Powerloom Sector: Subsidy for State Goods and Services Tax (SGST) (ISMPSSSGST)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, State Goods And Services Tax, Entrepreneurship, Subsidy, Reimbursement, GST, SGST
+
+87.  The West Bengal Incentive Scheme: Additional Incentive for Adventure Tour Operators (WBISAITO)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, Tour Operators, Tourism Units, Entrepreneurship, Subsidy, Reimbursement, Adventure
+
+88. West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Supply of Yarn to Societies etc. at Subsidized Rate (SYSSR)
+   Category: Business & Entrepreneurship
+   Tags: Handloom, Khadi Weavers, PWCS, Khadi Societies, Yarn, Subsidized Rate
+
+89.  The West Bengal Incentive Scheme: Tourism Promotion Assistance in lieu of Interest Subsidy (WBISTPAIS)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Tourism Promotion, Interest Subsidy, Entrepreneurship
+
+90. West Bengal Incentive Scheme for Approved Industrial Park (SAIP) for MSMEs: Incentive for Setting up a Power Sub Station (SAIPISPSS)
+   Category: Business & Entrepreneurship
+   Tags: Entrepreneurship, MSMEs, Incentives, Incentives, Non-Fiscal Incentives
+
+91. Banglashree for Micro, Small and Medium Enterprises: Power Subsidy (PS) (BMSMEPS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Power Subsidy, Entrepreneurship, Subsidy
+
+92. Banglashree for Micro, Small and Medium Enterprises: Subsidy for Water Conservation/Environment Compliance (WCS) (BMSMEWCS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Water Conservation, Environment Compliance, Entrepreneurship, Subsidy, Reimbursement, WCS
+
+93. West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Support for One Time Settlement (OTS) of NPA Accounts of PWCS (OTSNPA)
+   Category: Business & Entrepreneurship
+   Tags: Handloom, Khadi Weavers, NPA, PWCS, OTS
+
+94.  The West Bengal Incentive Scheme: Subsidy for Quality Improvement (WBISSQI)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Incentives, Quality Improvement, Tourism Units, Entrepreneurship, Subsidy, Reimbursement
+
+95.  West Bengal Textile Incentive Scheme: Power Subsidy (WBTISPS)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, Waiver, Entrepreneurship, Subsidy, Reimbursement, Power Subsidy
+
+96. Incentive Scheme for MSMEs in Powerloom Sector: Subsidy for Standard Quality Compliance (ISMPSSSQC)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, Quality Compliance, Certification, Entrepreneurship, Subsidy, Reimbursement
+
+97. Incentive Scheme for MSMEs in Powerloom Sector: Subsidy for Patent Registration (ISMPSSPR)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, Entrepreneurship, Subsidy, Reimbursement, Patent Registration
+
+98. Incentive Scheme for MSMEs in Powerloom Sector: Subsidy for Energy Efficiency (ISMPSSEE)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Energy Audit, Energy Efficiency, Entrepreneurship, Subsidy, Reimbursement, Energy Conservation, Energy Installations
+
+99. West Bengal Incentive Scheme for Approved Industrial Park (SAIP) for MSMEs: Construction of Approach Road (SAIPCAR)
+   Category: Business & Entrepreneurship
+   Tags: Entrepreneurship, MSMEs, Industrial Park, Approach Road Construction, Subsidy
+
+100.  The West Bengal Incentive Scheme: Capacity Utilisation (WBISCU)
+   Category: Business & Entrepreneurship
+   Tags: Tourism, Entrepreneurship, Capacity Utilisation, Incentives
+
+101. Financial Support Scheme for Farm Mechanization (FSSM) (FSSM)
+   Category: Agriculture,Rural & Environment
+   Tags: Agriculture, Farmer, Mechanization, Financial Assistance
+
+102. Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS) (BMSMESCCS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Standard Quality Compliance, Certification, Entrepreneurship, Subsidy, Reimbursement, SCCS
+
+103. Banglashree for Micro, Small and Medium Enterprises: State Capital Investment Subsidy (CIS) (BMSME:SCIS)
+   Category: Business & Entrepreneurship
+   Tags: MSME, Incentives, Subsidy, Financial Assistance, Entrepreneurship
+
+104. West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Assistance to Viable and Potentially Viable PWCS (AVPV)
+   Category: Business & Entrepreneurship
+   Tags: Handloom, Khadi Weavers, PWCS, Khadi Societies
+
+105. Incentive Scheme for MSMEs in Powerloom Sector: Subsidy for Water Conservation/ Environment Compliance (ISMPSSWCEC)
+   Category: Business & Entrepreneurship
+   Tags: Powerloom, Waiver, Environment Compliance, Entrepreneurship, Subsidy, Reimbursement, Water Conservation
+
+106. West Bengal Textile Incentive Scheme: Reimbursement of Stamp Duty and Registration Fee (WBTISRSDRE)
+   Category: Business & Entrepreneurship
+   Tags: Textile, Incentives, Waiver, Entrepreneurship, Subsidy, Reimbursement, Stamp Duty, Registration Fee
+
+107. Sabooj Sathi (WBSABOOJSATHI)
+   Category: Social welfare & Empowerment
+   Tags: Sabooj Sathi Scheme West Bengal Government, Student Welfare, Bicycles Distribution, Empowerment, Social Inclusion, Free Transportation, Sustainable Development
+
