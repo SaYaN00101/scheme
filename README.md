@@ -103,7 +103,7 @@ The application will be available at `http://localhost:3000`
 # Use curl or Postman to create the first admin
 curl -X POST http://localhost:3000/api/admin/setup \
   -H "Content-Type: application/json" \
-  -d '{"name":"Admin","email":"admin@schemeseeker.in","password":"admin123"}'
+  -d '{"name":"Admin","email":"sayan@admin.com","password":"sayan123"}'
 ```
 
 ## API Endpoints

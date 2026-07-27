@@ -333,10 +333,10 @@ CREATE TABLE pending_updates (
     FOREIGN KEY (reviewed_by) REFERENCES admins(id) ON DELETE SET NULL
 );
 
--- Insert default admin (password: admin123 - change in production)
--- Using bcrypt hash for 'admin123'
+-- Insert default admin (password: sayan123 - change in production)
+-- Using bcrypt hash for 'sayan123'
 INSERT INTO admins (name, email, password_hash) VALUES
-('System Admin', 'admin@schemeseeker.in', '$2b$10$YourHashHere.ReplaceWithRealBcryptHash');
+('System Admin', 'sayan@admin.com', '$2b$10$F/UY.ylbert1ne6gOlRt9O6V.xtFlWppljLU3Uv7tPzeY4hxpze92');
 
 -- ==========================================
 -- END OF DATABASE SCHEMA
