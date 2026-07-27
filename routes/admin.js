@@ -90,8 +90,8 @@ router.get('/stats', requireAdmin, async (req, res) => {
     // Total schemes
     const [schemesCount] = await db.query('SELECT COUNT(*) as count FROM schemes');
     const [activeSchemes] = await db.query('SELECT COUNT(*) as count FROM schemes WHERE is_active = TRUE');
-    const [centralSchemes] = await db.query('SELECT COUNT(*) as count FROM schemes WHERE scope = "central"');
-    const [stateSchemes] = await db.query('SELECT COUNT(*) as count FROM schemes WHERE scope = "state"');
+    const [centralSchemes] = await db.query('SELECT COUNT(*) as count FROM schemes WHERE scope = ?', ['central']);
+    const [stateSchemes] = await db.query('SELECT COUNT(*) as count FROM schemes WHERE scope = ?', ['state']);
 
     // Total users
     const [usersCount] = await db.query('SELECT COUNT(*) as count FROM users');
@@ -126,7 +126,8 @@ router.get('/stats', requireAdmin, async (req, res) => {
 
     // Pending updates
     const [pendingUpdates] = await db.query(
-      'SELECT COUNT(*) as count FROM pending_updates WHERE status = "pending"'
+      'SELECT COUNT(*) as count FROM pending_updates WHERE status = ?',
+      ['pending']
     );
 
     res.json({

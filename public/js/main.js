@@ -881,11 +881,13 @@ async function loadAdminDashboard() {
   if (!container) return;
 
   try {
-    const response = await fetch(`${API_BASE}/admin/stats`);
+    const response = await fetch(`${API_BASE}/admin/stats`, {
+      credentials: 'same-origin'
+    });
     const data = await response.json();
 
-    if (!data.success) {
-      window.location.href = '/admin';
+    if (!response.ok || !data.success) {
+      container.innerHTML = `<div class="alert alert-danger">${escapeHtml(data.message || 'Failed to load dashboard data')}</div>`;
       return;
     }
 
@@ -980,7 +982,8 @@ async function loadAdminDashboard() {
       </div>
     `;
   } catch (error) {
-    container.innerHTML = '<div class="alert alert-danger">Failed to load dashboard data</div>';
+    container.innerHTML = '<div class="alert alert-danger">Failed to load dashboard data. Please refresh the page and try again.</div>';
+    console.error('Admin dashboard load error:', error);
   }
 }
 
