@@ -2,22 +2,54 @@ const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
 const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 const SESSION_SECRET = process.env.SESSION_SECRET || 'schemeseeker_secret_key_2026';
+const isProduction = process.env.NODE_ENV === 'production';
+
+// MySQL session store — keeps sessions alive across serverless instances
+const sessionStoreOptions = {
+  host: process.env.DB_HOST || 'localhost',
+  port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 3306,
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'scheme_finder',
+  ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined,
+  clearExpired: true,
+  checkExpirationInterval: 15 * 60 * 1000, // check every 15 min
+  expiration: 24 * 60 * 60 * 1000,         // 24 hours
+  createDatabaseTable: true,                 // auto-creates sessions table if missing
+  schema: {
+    tableName: 'sessions',
+    columnNames: {
+      session_id: 'session_id',
+      expires: 'expires',
+      data: 'data'
+    }
+  }
+};
+
+const sessionStore = new MySQLStore(sessionStoreOptions);
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Trust proxy so cookies work correctly behind Vercel's edge
+app.set('trust proxy', 1);
+
 // Session configuration
 app.use(session({
   secret: SESSION_SECRET,
+  store: sessionStore,
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false, // Set to true in production with HTTPS
+    secure: isProduction,   // true on Vercel (HTTPS), false locally
+    httpOnly: true,
+    sameSite: isProduction ? 'none' : 'lax', // 'none' required for cross-origin on Vercel
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
   }
 }));
