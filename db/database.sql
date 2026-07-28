@@ -6,6 +6,7 @@ CREATE DATABASE IF NOT EXISTS scheme_finder;
 USE scheme_finder;
 
 -- Drop tables if exist (for fresh setup)
+DROP TABLE IF EXISTS sessions;
 DROP TABLE IF EXISTS pending_updates;
 DROP TABLE IF EXISTS saved_schemes;
 DROP TABLE IF EXISTS users;
@@ -337,6 +338,16 @@ CREATE TABLE pending_updates (
 -- Using bcrypt hash for 'sayan123'
 INSERT INTO admins (name, email, password_hash) VALUES
 ('System Admin', 'sayan@admin.com', '$2b$10$F/UY.ylbert1ne6gOlRt9O6V.xtFlWppljLU3Uv7tPzeY4hxpze92');
+
+-- ==========================================
+-- SESSIONS TABLE (for express-mysql-session)
+-- ==========================================
+CREATE TABLE IF NOT EXISTS sessions (
+    session_id VARCHAR(128) COLLATE utf8mb4_bin NOT NULL,
+    expires INT(11) UNSIGNED NOT NULL,
+    data MEDIUMTEXT COLLATE utf8mb4_bin,
+    PRIMARY KEY (session_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- ==========================================
 -- END OF DATABASE SCHEMA
