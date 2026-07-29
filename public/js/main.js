@@ -324,6 +324,88 @@ async function handleLogout(e) {
   }
 }
 
+async function loadUserProfile() {
+  const nameEl = document.getElementById('profileName');
+  const emailEl = document.getElementById('profileEmail');
+  const form = document.getElementById('profileForm');
+  if (!nameEl || !emailEl || !form) return;
+
+  try {
+    const response = await fetch(`${API_BASE}/users/profile`, {
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.status === 401) {
+      window.location.href = '/login?redirect=/profile';
+      return;
+    }
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      showToast(data.message || 'Unable to load profile', 'error');
+      return;
+    }
+
+    const user = data.user;
+    nameEl.textContent = user.name || 'User';
+    emailEl.textContent = user.email || '';
+    document.getElementById('name').value = user.name || '';
+    document.getElementById('email').value = user.email || '';
+    document.getElementById('age').value = user.age || '';
+    document.getElementById('gender').value = user.gender || '';
+    document.getElementById('annual_income').value = user.annual_income || '';
+    document.getElementById('occupation').value = user.occupation || '';
+    document.getElementById('education_level').value = user.education_level || '';
+    document.getElementById('caste_category').value = user.caste_category || '';
+    document.getElementById('district').value = user.district || '';
+  } catch (error) {
+    showToast('Failed to load profile', 'error');
+  }
+}
+
+function initProfileForm() {
+  const form = document.getElementById('profileForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Saving...';
+
+    try {
+      const response = await fetch(`${API_BASE}/users/profile`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: document.getElementById('name').value,
+          age: document.getElementById('age').value ? parseInt(document.getElementById('age').value) : null,
+          gender: document.getElementById('gender').value || null,
+          annual_income: document.getElementById('annual_income').value ? parseFloat(document.getElementById('annual_income').value) : null,
+          occupation: document.getElementById('occupation').value || null,
+          education_level: document.getElementById('education_level').value || null,
+          caste_category: document.getElementById('caste_category').value || null,
+          district: document.getElementById('district').value || null
+        })
+      });
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        showToast('Profile updated successfully');
+        document.getElementById('profileName').textContent = document.getElementById('name').value || 'User';
+      } else {
+        showToast(data.message || 'Failed to update profile', 'error');
+      }
+    } catch (error) {
+      showToast('Failed to update profile', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Save Changes';
+    }
+  });
+}
+
 // ============================================
 // SCHEME FUNCTIONS
 // ============================================
@@ -456,24 +538,87 @@ async function toggleSave(event, schemeId) {
     return;
   }
 
+  const btn = event.currentTarget;
+  const isSaved = btn.classList.contains('saved');
+
   try {
-    const response = await fetch(`${API_BASE}/users/save-scheme`, {
-      method: 'POST',
+    const response = await fetch(`${API_BASE}/users/save-scheme${isSaved ? `/${schemeId}` : ''}`, {
+      method: isSaved ? 'DELETE' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ scheme_id: schemeId })
+      body: isSaved ? undefined : JSON.stringify({ scheme_id: schemeId })
     });
     const data = await response.json();
 
     if (data.success) {
-      const btn = event.currentTarget;
-      btn.classList.toggle('saved');
+      btn.classList.toggle('saved', !isSaved);
       const icon = btn.querySelector('i');
-      icon.classList.toggle('bi-bookmark');
-      icon.classList.toggle('bi-bookmark-fill');
-      showToast('Scheme saved!');
+      icon.classList.toggle('bi-bookmark', isSaved);
+      icon.classList.toggle('bi-bookmark-fill', !isSaved);
+      showToast(isSaved ? 'Scheme removed from saved list' : 'Scheme saved!');
+
+      if (window.location.pathname === '/saved') {
+        loadSavedSchemes();
+      }
     }
   } catch (error) {
-    showToast('Failed to save scheme', 'error');
+    showToast(isSaved ? 'Failed to remove scheme' : 'Failed to save scheme', 'error');
+  }
+}
+
+async function loadSavedSchemes() {
+  const container = document.getElementById('savedSchemesContainer');
+  if (!container) return;
+
+  showLoading(container, 'Loading your saved schemes...');
+
+  try {
+    const response = await fetch(`${API_BASE}/users/saved-schemes`);
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      showError(container, data.message || 'Unable to load saved schemes');
+      return;
+    }
+
+    if (!data.savedSchemes || data.savedSchemes.length === 0) {
+      container.innerHTML = `
+        <div class="col-12 empty-state">
+          <i class="bi bi-bookmark empty-state-icon"></i>
+          <h3>No saved schemes yet</h3>
+          <p>Save schemes you want to review later.</p>
+          <a href="/results?browse=all" class="btn btn-primary mt-3">Browse Schemes</a>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = data.savedSchemes.map((scheme, index) => `
+      <div class="col-md-6 col-lg-4 fade-in" style="animation-delay: ${index * 0.05}s">
+        <div class="card scheme-card h-100">
+          <div class="card-body">
+            <span class="scheme-scope-badge ${scheme.scope === 'central' ? 'scope-central' : 'scope-state'}">${scheme.scope === 'central' ? 'Central' : 'State'}</span>
+            <div class="scheme-category">
+              <i class="bi ${getCategoryIcon(scheme.category_name)}"></i>
+              ${escapeHtml(scheme.category_name)}
+            </div>
+            <h5 class="scheme-title">${escapeHtml(scheme.name)}</h5>
+            <p class="scheme-description">${escapeHtml(scheme.description.substring(0, 150))}...</p>
+            <div class="scheme-meta">
+              <span class="scheme-meta-item"><i class="bi bi-calendar"></i> ${scheme.min_age}-${scheme.max_age === 120 ? '+' : scheme.max_age} years</span>
+              <span class="scheme-meta-item"><i class="bi bi-currency-rupee"></i> ${scheme.max_income ? 'Up to ' + formatCurrency(scheme.max_income) : 'No limit'}</span>
+            </div>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <a href="/scheme/${scheme.id}" class="btn btn-primary btn-sm">View Details <i class="bi bi-arrow-right"></i></a>
+            <button class="bookmark-btn saved" onclick="toggleSave(event, ${scheme.id})" title="Remove saved scheme">
+              <i class="bi bi-bookmark-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  } catch (error) {
+    showError(container, 'Failed to load saved schemes');
   }
 }
 
@@ -1013,6 +1158,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoginForm();
   } else if (path === '/register' || path === '/register.html') {
     initRegisterForm();
+  } else if (path === '/profile' || path === '/profile.html') {
+    loadUserProfile();
+    initProfileForm();
+  } else if (path === '/saved' || path === '/saved.html') {
+    loadSavedSchemes();
   } else if (path === '/admin/dashboard') {
     loadAdminDashboard();
   }

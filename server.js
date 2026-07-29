@@ -3,6 +3,7 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
+const { requireUser } = require('./middleware/auth');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -65,6 +66,8 @@ app.get('/results', (req, res) => res.sendFile(path.join(__dirname, 'views', 're
 app.get('/scheme/:id', (req, res) => res.sendFile(path.join(__dirname, 'views', 'scheme-detail.html')));
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')));
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')));
+app.get('/profile', requireUser, (req, res) => res.sendFile(path.join(__dirname, 'views', 'profile.html')));
+app.get('/saved', requireUser, (req, res) => res.sendFile(path.join(__dirname, 'views', 'saved.html')));
 app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, 'views', 'admin', 'login.html')));
 app.get('/admin/dashboard', (req, res) => res.sendFile(path.join(__dirname, 'views', 'admin', 'dashboard.html')));
 
