@@ -944,8 +944,8 @@ a:hover {
    ============================================ */
 
 .footer {
-  background: var(--dark);
-  color: rgba(255,255,255,0.7);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+  color: rgba(255,255,255,0.9);
   padding: 3rem 0 1.5rem;
   margin-top: auto;
 }
